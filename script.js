@@ -1,5 +1,5 @@
 	// create the module and name it scotchApp
-	var scotchApp = angular.module('scotchApp', ['ngRoute','angulartics', 'angulartics.google.analytics']);
+	var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
 	// configure our routes
 	scotchApp.config(function($routeProvider) {
