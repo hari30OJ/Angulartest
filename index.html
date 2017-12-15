@@ -17,34 +17,18 @@
 <script src="/bower_components/bower_components/angulartics-google-tag-manager/dist/angulartics-google-tag-manager.min.js"></script>
  <!-- <script src="/bower_components/bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js"></script> -->
  
-<!--GET page param from top window dataLayer-->
-<script type="text/javascript">
-if(self!=top){
-var pageParam = window.top['dataLayer'][0]['page']+"/iframe/";
-dataLayer = [{ 'page': pageParam}];
-}
- 
-</script>
-<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M97H7WL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-M97H7WL');</script>
 <!-- End Google Tag Manager -->
 <script src="script.js"></script>
 </head>
 
-<!-- define angular controller -->
-<body ng-app="scotchApp">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M97H7WL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<script>
-  window.ga('create', 'UA-111310002-1', 'auto');
-</script>
 <div ng-controller="mainController"> 
 
   <nav class="navbar navbar-default">
