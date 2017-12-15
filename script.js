@@ -2,7 +2,7 @@
 	var scotchApp = angular.module('scotchApp', ['ngRoute','angulartics', 'angulartics.google.tagmanager']);
 
 	// configure our routes
-	scotchApp.config(function($routeProvider,$analyticsProvider) {
+	scotchApp.config(function($routeProvider, $analyticsProvider) {
 		$routeProvider
 
 			// route for the home page
