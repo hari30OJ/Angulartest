@@ -1,5 +1,5 @@
 	// create the module and name it scotchApp
-	var scotchApp = angular.module('scotchApp', ['ngRoute']);
+	var scotchApp = angular.module('scotchApp', ['ngRoute','angulartics', 'angulartics.google.analytics']);
 
 	// configure our routes
 	scotchApp.config(function($routeProvider) {
@@ -23,27 +23,6 @@
 				controller  : 'contactController'
 			});
 	});
-	scotchApp.run($run);
-	// Safely instantiate dataLayer
-	  var dataLayer = window.dataLayer = window.dataLayer || [];
-
-	  $run.$inject = ['$rootScope', '$location'];
-
-	  function $run($rootScope, $location) {
-
-	    $rootScope.$on('$routeChangeSuccess', function() {
-
-	      dataLayer.push({
-		event: 'ngRouteChange',
-		attributes: {
-		  route: $location.path()
-		}
-	      });
-
-	    });
-
-	  }
-
 	// create the controller and inject Angular's $scope
 	scotchApp.controller('mainController', function($scope) {
 		// create a message to display in our view
